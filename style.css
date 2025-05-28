@@ -1,0 +1,90 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab);
+@import url(webfontkit-20250512-153937/carmen.css);
+:root{
+    --background: #f6fdfa;
+    --text-color: #14553f;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  /* 141% ~ sqrt(2)x100% to make sure to cover all the area after the rotation */
+  width: 141%;
+  height:141%;
+  /**/
+  /* to center*/
+  left: 50%;
+  top: 50%;
+  /* */
+  background: url(assets/Treasures_of_Bohemia_padding.svg);
+  background-size: 300px 300px; /* size of the image*/
+  transform:translate(-50%,-50%) rotate(-15deg); /* center the element then rotate */
+  opacity: 0.02;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    max-width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+header img {
+    max-height: 10em;
+}
+
+main {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+footer {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Carmen CZ', sans-serif;
+    font-size: 5em;
+    color: var(--text-color);
+    margin: 0.5em;
+}
+h2 {
+    font-family: 'Carmen CZ', sans-serif;
+    font-size: 3em;
+    color: var(--text-color);
+    text-align: center;
+}
+h3 {
+    font-family: 'Carmen CZ', sans-serif;
+    font-size: 2em;
+    color: var(--text-color);
+}
+p {
+    font-family: 'Roboto Slab', serif;
+}
+
+img {
+    max-height: 500px;
+}
+
+/*main img {
+    border: 50px solid transparent;
+    border-image-source: url(assets/imgBorder.PNG);
+    border-image-slice: 35%;
+    border-image-repeat: round;
+    border-image-outset: 0px;
+}*/
